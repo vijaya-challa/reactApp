@@ -13,16 +13,17 @@ const App=()=>{
 
     return(
         <div className='App'>
-
+{/* <Home/> */}
             <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route path='/'>
+                    <Route index element={<Home/>}/>
                 <Route path='todos'>
                     <Route index element={<Todos/>}/>
                     <Route path=':id' element={<Edit/>} />
 
                 </Route>
-                
-
+                </Route>                
+                <Route path='*' element={<Home/>}/>
             </Routes>
         </div>
     )
